@@ -1,0 +1,24 @@
+@use"../../assets/styles/mixin" as mixin;
+
+.header {
+    padding: 10px 20px;
+    box-shadow: var(--box-shadow-nav);
+    img {
+        width: 70px;
+    }
+}
+
+.desktopHeader{
+    @include mixin.xs {
+        display: none;
+    }
+}
+
+.mobileHeader {
+    display: none;
+    @include mixin.xs {
+        display: block;
+    }
+    cursor: pointer;
+    font-size: 1.8rem;
+}
